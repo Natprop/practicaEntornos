@@ -18,7 +18,7 @@ public class Notas {
     /**
      * Calificación de la segunda unidad formativa.
      */
-    private double unidad2;
+    private double uf2;
     
     /**
      * Calificación de la tercera unidad formativa.
@@ -67,7 +67,7 @@ public class Notas {
         System.out.print("Ingrese la primera nota: ");
         uf1 = entrada.nextDouble();
         System.out.print("Ingrese la segunda nota: ");
-        unidad2 = entrada.nextDouble();
+        uf2 = entrada.nextDouble();
         System.out.print("Ingrese la tercera nota: ");
         unidad3 = entrada.nextDouble();
     }
@@ -81,7 +81,7 @@ public class Notas {
         } else {
             System.out.println("La primera nota es válida");
         }
-        if (unidad2 > 10 || unidad2 < 0) {
+        if (uf2 > 10 || uf2 < 0) {
             System.out.println("La segunda nota es incorrecta");
         } else {
             System.out.println("La segunda nota es válida");
@@ -98,7 +98,7 @@ public class Notas {
      */
     public void calcularDefinitiva() {
         acu1 = uf1 * 0.35;
-        acu2 = unidad2 * 0.35;
+        acu2 = uf2 * 0.35;
         acu3 = unidad3 * 0.30;
         definitiva = acu1 + acu2 + acu3;
     }
@@ -109,7 +109,7 @@ public class Notas {
     public void mostrarResultados() {
         System.out.println("Notas registradas:");
         System.out.println("Nota 1 = " + uf1);
-        System.out.println("Nota 2 = " + unidad2);
+        System.out.println("Nota 2 = " + uf2);
         System.out.println("Nota 3 = " + unidad3);
         System.out.println("Ponderación 1 = " + acu1);
         System.out.println("Ponderación 2 = " + acu2);
